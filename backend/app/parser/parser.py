@@ -1,6 +1,7 @@
 from app.lexer.lexer import Lexer
 from app.parser.predict_set import PREDICT_SET
 from app.parser.predict_set_err import PREDICT_SET_ERR
+from app.parser.ast_nodes import ParseNode
 from tests.test_parser_util import run_file
 import logging as log                                      
 
@@ -14,6 +15,7 @@ class Parser:
         """ Token Stream """
         self.tokenlist = [t for t in tokens if t.type not in ("space", "tab", "newline", "comment_single", "comment_multi")] # filter out ws and comments
         self.result = True
+        self.ast = None  # Root of the parse tree
 
         """ Properties """
         self.tokens = [t.type for t in self.tokenlist]
@@ -35,7 +37,13 @@ class Parser:
         if self.current_tok == tok: 
             log.warning(f"Expected: {tok} | Current: {self.current_tok} | Remark: MATCH!")
             # print(f"├──Expected: {tok} | Current: {self.current_tok} | Remark: MATCH!")
+            
+            # Create node with current token info before advancing
+            token_obj = self.tokenlist[self.pos]
+            node = ParseNode(tok, token=token_obj)
+            
             self.advance(tok)
+            return node
         else:
             log.warning(f"Expected: {tok} | Current: {self.current_tok} | Remark: INVALID!\n")
             # print(f"└──Expected: {tok} | Current: {self.current_tok} | Remark: INVALID!")
@@ -78,45 +86,51 @@ class Parser:
 
     def parse(self):
         if self.tokenlist:
-            self.program()
+            self.ast = self.program()
         else: self.error_handler("Parse_err", (", ".join(f"'{tok}'" for tok in PREDICT_SET_ERR["<program>"])))
-        return self.result
+        return self.ast
 
     def program(self):
         log.info("Enter: " + self.current_tok)
+        node = ParseNode("<program>")
+        
         if self.current_tok in PREDICT_SET_ERR["<program>"]:
             if self.current_tok in PREDICT_SET["<program>"]:
-                self.global_decl() 
+                node.add_child(self.global_decl())
             if self.current_tok in PREDICT_SET["<recipe_decl>"]:
-                self.recipe_decl() 
-            self.parse_token("start")
-            self.parse_token("(")
-            self.parse_token(")")
-            self.platter()
+                node.add_child(self.recipe_decl())
+            node.add_child(self.parse_token("start"))
+            node.add_child(self.parse_token("("))
+            node.add_child(self.parse_token(")"))
+            node.add_child(self.platter())
         else: self.error_handler("Unexpected_err", (", ".join(f"'{tok}'" for tok in PREDICT_SET_ERR["<program>"])))
 
         # Ensure EOF after parsing
         if self.current_tok != "EOF": self.error_handler("ExpectedEOF_err", None) 
         log.info("Exit: " + self.current_tok)
+        return node
 
     def global_decl(self):
         log.info("Enter: " + self.current_tok)
+        node = ParseNode("<global_decl>")
+        
         if self.current_tok in PREDICT_SET_ERR["<global_decl>"]:
             if self.current_tok in PREDICT_SET["<global_decl>"]: # if has null in set
-                self.decl_data_type()
-                self.global_decl()
+                node.add_child(self.decl_data_type())
+                node.add_child(self.global_decl())
             if self.current_tok in PREDICT_SET["<global_decl_1>"]:
-                self.table_prototype()
-                self.global_decl() 
+                node.add_child(self.table_prototype())
+                node.add_child(self.global_decl())
             if self.current_tok in PREDICT_SET["<global_decl_2>"]:
-                self.parse_token("id")
-                self.table_decl() 
-                self.global_decl()
+                node.add_child(self.parse_token("id"))
+                node.add_child(self.table_decl())
+                node.add_child(self.global_decl())
             if self.current_tok in PREDICT_SET["<global_decl_3>"]:
                 log.info("Exit: " + self.current_tok)
-                return # λ
+                return node # λ - return node even if empty
         else: self.error_handler("Unexpected_err", (", ".join(f"'{tok}'" for tok in PREDICT_SET_ERR["<global_decl>"])))
         log.info("Exit: " + self.current_tok)
+        return node
 
     def decl_data_type(self):
         log.info("Enter: " + self.current_tok)
@@ -189,11 +203,14 @@ class Parser:
     
     def expr(self):
         log.info("Enter: " + self.current_tok)
+        node = ParseNode("<expr>")
+        
         if self.current_tok in PREDICT_SET_ERR["<expr>"]:
             if self.current_tok in PREDICT_SET["<expr>"]:
-                self.or_expr()
+                node.add_child(self.or_expr())
         else: self.error_handler("Unexpected_err", (", ".join(f"'{tok}'" for tok in PREDICT_SET_ERR["<expr>"])))
         log.info("Exit: " + self.current_tok)
+        return node
     
     def or_expr(self):
         log.info("Enter: " + self.current_tok)
