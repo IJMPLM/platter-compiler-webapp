@@ -1,0 +1,1681 @@
+INFO: <program> | Enter: piece
+INFO: <global_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ,
+
+INFO: <ingredient_init> | Enter: ,
+INFO: <ingredient_init> | Exit: ,
+INFO: <ingredient_id_tail> | Enter: ,
+WARNING: <parse_token> | Expected: , | Current: , | Remark: MATCH!
+WARNING: <advance> | Consuming: , -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ,
+
+INFO: <ingredient_init> | Enter: ,
+INFO: <ingredient_init> | Exit: ,
+INFO: <ingredient_id_tail> | Enter: ,
+WARNING: <parse_token> | Expected: , | Current: , | Remark: MATCH!
+WARNING: <advance> | Consuming: , -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> sip
+
+INFO: <decl_type> | Exit: sip
+WARNING: <parse_token> | Expected: sip | Current: sip | Remark: MATCH!
+WARNING: <advance> | Consuming: sip -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> =
+
+INFO: <ingredient_init> | Enter: =
+WARNING: <parse_token> | Expected: = | Current: = | Remark: MATCH!
+WARNING: <advance> | Consuming: = -> sip_lit
+
+INFO: <expr> | Enter: sip_lit
+INFO: <or_expr> | Enter: sip_lit
+INFO: <and_expr> | Enter: sip_lit
+INFO: <eq_expr> | Enter: sip_lit
+INFO: <rel_expr> | Enter: sip_lit
+INFO: <add_expr> | Enter: sip_lit
+INFO: <mult_expr> | Enter: sip_lit
+INFO: <unary_expr> | Enter: sip_lit
+INFO: <primary_val> | Enter: sip_lit
+WARNING: <parse_token> | Expected: sip_lit | Current: sip_lit | Remark: MATCH!
+WARNING: <advance> | Consuming: sip_lit -> ;
+
+INFO: <unary_expr> | Exit: ;
+INFO: <mult_tail> | Enter: ;
+INFO: <mult_tail> | Exit: ;
+INFO: <mult_expr> | Exit: ;
+INFO: <add_tail> | Enter: ;
+INFO: <add_tail> | Exit: ;
+INFO: <add_expr> | Exit: ;
+INFO: <rel_tail> | Enter: ;
+INFO: <rel_tail> | Exit: ;
+INFO: <rel_expr> | Exit: ;
+INFO: <eq_tail> | Enter: ;
+INFO: <eq_tail> | Exit: ;
+INFO: <eq_expr> | Exit: ;
+INFO: <and_tail> | Enter: ;
+INFO: <and_tail> | Exit: ;
+INFO: <and_expr> | Exit: ;
+INFO: <or_tail> | Enter: ;
+INFO: <or_tail> | Exit: ;
+INFO: <or_expr> | Exit: ;
+INFO: <expr> | Exit: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> flag
+
+INFO: <decl_type> | Exit: flag
+WARNING: <parse_token> | Expected: flag | Current: flag | Remark: MATCH!
+WARNING: <advance> | Consuming: flag -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> start
+
+INFO: <decl_type> | Exit: start
+INFO: <decl_data_type> | Exit: start
+INFO: <global_decl> | Enter: start
+INFO: <global_decl> | Exit: start
+INFO: <global_decl> | Exit: start
+WARNING: <parse_token> | Expected: start | Current: start | Remark: MATCH!
+WARNING: <advance> | Consuming: start -> (
+
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> )
+
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> {
+
+INFO: <platter> | Enter: {
+WARNING: <parse_token> | Expected: { | Current: { | Remark: MATCH!
+WARNING: <advance> | Consuming: { -> piece
+
+INFO: <local_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> bill
+
+INFO: <decl_type> | Exit: bill
+INFO: <decl_data_type> | Exit: bill
+INFO: <local_decl> | Enter: bill
+INFO: <local_decl> | Exit: bill
+INFO: <local_decl> | Exit: bill
+INFO: <statements> | Enter: bill
+INFO: <built_in_rec_call> | Enter: bill
+INFO: <built_in_rec> | Enter: bill
+WARNING: <parse_token> | Expected: bill | Current: bill | Remark: MATCH!
+WARNING: <advance> | Consuming: bill -> (
+
+INFO: <tail1> | Enter: (
+INFO: <call_tail> | Enter: (
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> id
+
+INFO: <flavor> | Enter: id
+INFO: <value> | Enter: id
+INFO: <expr> | Enter: id
+INFO: <or_expr> | Enter: id
+INFO: <and_expr> | Enter: id
+INFO: <eq_expr> | Enter: id
+INFO: <rel_expr> | Enter: id
+INFO: <add_expr> | Enter: id
+INFO: <mult_expr> | Enter: id
+INFO: <unary_expr> | Enter: id
+INFO: <primary_val> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> )
+
+INFO: <id_tail> | Enter: )
+INFO: <call_tailopt> | Enter: )
+INFO: <call_tailopt> | Exit: )
+INFO: <accessor_tail> | Enter: )
+INFO: <accessor_tail> | Exit: )
+INFO: <id_tail> | Exit: )
+INFO: <unary_expr> | Exit: )
+INFO: <mult_tail> | Enter: )
+INFO: <mult_tail> | Exit: )
+INFO: <mult_expr> | Exit: )
+INFO: <add_tail> | Enter: )
+INFO: <add_tail> | Exit: )
+INFO: <add_expr> | Exit: )
+INFO: <rel_tail> | Enter: )
+INFO: <rel_tail> | Exit: )
+INFO: <rel_expr> | Exit: )
+INFO: <eq_tail> | Enter: )
+INFO: <eq_tail> | Exit: )
+INFO: <eq_expr> | Exit: )
+INFO: <and_tail> | Enter: )
+INFO: <and_tail> | Exit: )
+INFO: <and_expr> | Exit: )
+INFO: <or_tail> | Enter: )
+INFO: <or_tail> | Exit: )
+INFO: <or_expr> | Exit: )
+INFO: <expr> | Exit: )
+INFO: <flavor_tail> | Enter: )
+INFO: <flavor_tail> | Exit: )
+INFO: <flavor> | Exit: )
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> ;
+
+INFO: <call_tail> | Exit: ;
+INFO: <accessor_tail> | Enter: ;
+INFO: <accessor_tail> | Exit: ;
+INFO: <tail1> | Exit: ;
+INFO: <built_in_rec_call> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> }
+
+INFO: <statements> | Enter: }
+INFO: <statements> | Exit: }
+INFO: <statements> | Exit: }
+WARNING: <parse_token> | Expected: } | Current: } | Remark: MATCH!
+WARNING: <advance> | Consuming: } -> EOF
+
+INFO: <platter> | Exit: EOF
+INFO: <program> | Exit: EOF
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | SEMANTIC ANALYSIS - MULTI-PASS
+INFO: <analyze> | ================================================================================
+INFO: <pass1_symbol_tables> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass1_symbol_tables> | PASS 1: Symbol Table Construction
+INFO: <pass1_symbol_tables> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <info> | 
+================================================================================
+PASS 1: SYMBOL TABLE CONSTRUCTION
+================================================================================
+DEBUG: <debug> | Visiting program node
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Declared ingredient: x : piece (scope: global, line 2)
+DEBUG: <debug> | Declared ingredient: y : piece (scope: global, line 2)
+DEBUG: <debug> | Declared ingredient: z : piece (scope: global, line 2)
+DEBUG: <debug> | Processing declaration: sip
+DEBUG: <debug> | Declared ingredient: temperature : sip (scope: global, line 3)
+DEBUG: <debug> | Processing declaration: flag
+DEBUG: <debug> | Declared ingredient: isReady : flag (scope: global, line 4)
+DEBUG: <debug> | Declared recipe: start(0 params) -> void (line 6)
+DEBUG: <debug> | Entered scope: start (level 1)
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Declared ingredient: count : piece (scope: start, line 7)
+DEBUG: <debug> | Exited scope: start (level 1)
+INFO: <info> | 
+
+  GLOBAL INGREDIENTS:
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Type       Array    Dims            Init   InitVal         Line   Col   
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  x                    piece      No       -               No     -               2      14    
+  y                    piece      No       -               No     -               2      17    
+  z                    piece      No       -               No     -               2      20    
+  temperature          sip        No       -               Yes    <expression>    3      12    
+  isReady              flag       No       -               No     -               4      13    
+
+  LOCAL INGREDIENTS:
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Type       Scope           Level   Array    Dims            Param   Line   Col   
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  count                piece      start           1       No       -               No      7      18    
+INFO: <info> | 
+
+  RECIPES (FUNCTIONS):
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Return Type     Params  Main   Builtin   Line   Col    Parameter Details                                 
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  start                void            0       Yes    No        6      5      -                                                 
+INFO: <info> | 
+================================================================================
+INFO: <info> | PASS 1 COMPLETE: Symbol tables built successfully
+INFO: <info> | ================================================================================
+INFO: <pass1_symbol_tables> | \u2713 Pass 1 Complete: Symbol tables built
+INFO: <pass2_type_checking> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | PASS 2: Type Checking
+INFO: <pass2_type_checking> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | (Placeholder - Not yet implemented)
+INFO: <pass2_type_checking> | \u2713 Pass 2 Complete (placeholder)
+INFO: <pass3_expression_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | PASS 3: Expression Validation
+INFO: <pass3_expression_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | (Placeholder - Not yet implemented)
+INFO: <pass3_expression_validation> | \u2713 Pass 3 Complete (placeholder)
+INFO: <pass4_control_flow> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | PASS 4: Control Flow Analysis
+INFO: <pass4_control_flow> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | (Placeholder - Not yet implemented)
+INFO: <pass4_control_flow> | \u2713 Pass 4 Complete (placeholder)
+INFO: <pass5_recipe_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | PASS 5: Recipe Call Validation
+INFO: <pass5_recipe_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | (Placeholder - Not yet implemented)
+INFO: <pass5_recipe_validation> | \u2713 Pass 5 Complete (placeholder)
+INFO: <print_summary> | 
+--------------------------------------------------------------------------------
+INFO: <print_summary> | SEMANTIC ANALYSIS SUMMARY
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <print_summary> |   Ingredients: 6 unique names, 6 total declarations
+INFO: <print_summary> |   Recipes: 1 functions
+INFO: <print_summary> |   Errors: 0
+INFO: <print_summary> |   Warnings: 0
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | \u2713 SEMANTIC ANALYSIS COMPLETE: All passes succeeded
+INFO: <analyze> | ================================================================================
+INFO: <program> | Enter: piece
+INFO: <global_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> [
+
+INFO: <decl_type> | Enter: [
+INFO: <dimensions> | Enter: [
+WARNING: <parse_token> | Expected: [ | Current: [ | Remark: MATCH!
+WARNING: <advance> | Consuming: [ -> ]
+
+WARNING: <parse_token> | Expected: ] | Current: ] | Remark: MATCH!
+WARNING: <advance> | Consuming: ] -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <dimensions> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <array_declare> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <array_table_init> | Enter: ;
+INFO: <array_table_init> | Exit: ;
+INFO: <array_declare_tail> | Enter: ;
+INFO: <array_declare_tail> | Exit: ;
+INFO: <array_declare> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> piece
+
+INFO: <decl_type> | Exit: piece
+INFO: <decl_data_type> | Exit: piece
+INFO: <global_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> [
+
+INFO: <decl_type> | Enter: [
+INFO: <dimensions> | Enter: [
+WARNING: <parse_token> | Expected: [ | Current: [ | Remark: MATCH!
+WARNING: <advance> | Consuming: [ -> ]
+
+WARNING: <parse_token> | Expected: ] | Current: ] | Remark: MATCH!
+WARNING: <advance> | Consuming: ] -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <dimensions> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <array_declare> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <array_table_init> | Enter: ;
+INFO: <array_table_init> | Exit: ;
+INFO: <array_declare_tail> | Enter: ;
+INFO: <array_declare_tail> | Exit: ;
+INFO: <array_declare> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> sip
+
+INFO: <decl_type> | Exit: sip
+WARNING: <parse_token> | Expected: sip | Current: sip | Remark: MATCH!
+WARNING: <advance> | Consuming: sip -> [
+
+INFO: <decl_type> | Enter: [
+INFO: <dimensions> | Enter: [
+WARNING: <parse_token> | Expected: [ | Current: [ | Remark: MATCH!
+WARNING: <advance> | Consuming: [ -> ]
+
+WARNING: <parse_token> | Expected: ] | Current: ] | Remark: MATCH!
+WARNING: <advance> | Consuming: ] -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <dimensions> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <array_declare> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <array_table_init> | Enter: ;
+INFO: <array_table_init> | Exit: ;
+INFO: <array_declare_tail> | Enter: ;
+INFO: <array_declare_tail> | Exit: ;
+INFO: <array_declare> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> start
+
+INFO: <decl_type> | Exit: start
+INFO: <decl_data_type> | Exit: start
+INFO: <global_decl> | Enter: start
+INFO: <global_decl> | Exit: start
+INFO: <global_decl> | Exit: start
+INFO: <global_decl> | Exit: start
+WARNING: <parse_token> | Expected: start | Current: start | Remark: MATCH!
+WARNING: <advance> | Consuming: start -> (
+
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> )
+
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> {
+
+INFO: <platter> | Enter: {
+WARNING: <parse_token> | Expected: { | Current: { | Remark: MATCH!
+WARNING: <advance> | Consuming: { -> bill
+
+INFO: <local_decl> | Enter: bill
+INFO: <local_decl> | Exit: bill
+INFO: <statements> | Enter: bill
+INFO: <built_in_rec_call> | Enter: bill
+INFO: <built_in_rec> | Enter: bill
+WARNING: <parse_token> | Expected: bill | Current: bill | Remark: MATCH!
+WARNING: <advance> | Consuming: bill -> (
+
+INFO: <tail1> | Enter: (
+INFO: <call_tail> | Enter: (
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> chars_lit
+
+INFO: <flavor> | Enter: chars_lit
+INFO: <value> | Enter: chars_lit
+INFO: <expr> | Enter: chars_lit
+INFO: <or_expr> | Enter: chars_lit
+INFO: <and_expr> | Enter: chars_lit
+INFO: <eq_expr> | Enter: chars_lit
+INFO: <rel_expr> | Enter: chars_lit
+INFO: <add_expr> | Enter: chars_lit
+INFO: <mult_expr> | Enter: chars_lit
+INFO: <unary_expr> | Enter: chars_lit
+INFO: <primary_val> | Enter: chars_lit
+WARNING: <parse_token> | Expected: chars_lit | Current: chars_lit | Remark: MATCH!
+WARNING: <advance> | Consuming: chars_lit -> )
+
+INFO: <unary_expr> | Exit: )
+INFO: <mult_tail> | Enter: )
+INFO: <mult_tail> | Exit: )
+INFO: <mult_expr> | Exit: )
+INFO: <add_tail> | Enter: )
+INFO: <add_tail> | Exit: )
+INFO: <add_expr> | Exit: )
+INFO: <rel_tail> | Enter: )
+INFO: <rel_tail> | Exit: )
+INFO: <rel_expr> | Exit: )
+INFO: <eq_tail> | Enter: )
+INFO: <eq_tail> | Exit: )
+INFO: <eq_expr> | Exit: )
+INFO: <and_tail> | Enter: )
+INFO: <and_tail> | Exit: )
+INFO: <and_expr> | Exit: )
+INFO: <or_tail> | Enter: )
+INFO: <or_tail> | Exit: )
+INFO: <or_expr> | Exit: )
+INFO: <expr> | Exit: )
+INFO: <flavor_tail> | Enter: )
+INFO: <flavor_tail> | Exit: )
+INFO: <flavor> | Exit: )
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> ;
+
+INFO: <call_tail> | Exit: ;
+INFO: <accessor_tail> | Enter: ;
+INFO: <accessor_tail> | Exit: ;
+INFO: <tail1> | Exit: ;
+INFO: <built_in_rec_call> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> }
+
+INFO: <statements> | Enter: }
+INFO: <statements> | Exit: }
+INFO: <statements> | Exit: }
+WARNING: <parse_token> | Expected: } | Current: } | Remark: MATCH!
+WARNING: <advance> | Consuming: } -> EOF
+
+INFO: <platter> | Exit: EOF
+INFO: <program> | Exit: EOF
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | SEMANTIC ANALYSIS - MULTI-PASS
+INFO: <analyze> | ================================================================================
+INFO: <pass1_symbol_tables> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass1_symbol_tables> | PASS 1: Symbol Table Construction
+INFO: <pass1_symbol_tables> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <info> | 
+================================================================================
+PASS 1: SYMBOL TABLE CONSTRUCTION
+================================================================================
+DEBUG: <debug> | Visiting program node
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Visiting array_declare for type: piece, dimensions: []
+DEBUG: <debug> | Found array identifier: numbers
+DEBUG: <debug> | Declaring array: numbers : piece[] at line 2, col 16
+DEBUG: <debug> | Declared ingredient: numbers : piece (scope: global, line 2)
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Visiting array_declare for type: piece, dimensions: []
+DEBUG: <debug> | Found array identifier: matrix
+DEBUG: <debug> | Declaring array: matrix : piece[] at line 3, col 16
+DEBUG: <debug> | Declared ingredient: matrix : piece (scope: global, line 3)
+DEBUG: <debug> | Processing declaration: sip
+DEBUG: <debug> | Visiting array_declare for type: sip, dimensions: []
+DEBUG: <debug> | Found array identifier: temperatures
+DEBUG: <debug> | Declaring array: temperatures : sip[] at line 4, col 14
+DEBUG: <debug> | Declared ingredient: temperatures : sip (scope: global, line 4)
+DEBUG: <debug> | Declared recipe: start(0 params) -> void (line 6)
+DEBUG: <debug> | Entered scope: start (level 1)
+DEBUG: <debug> | Exited scope: start (level 1)
+INFO: <info> | 
+
+  GLOBAL INGREDIENTS:
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Type       Array    Dims            Init   InitVal         Line   Col   
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  numbers              piece      Yes      -               No     -               2      16    
+  matrix               piece      Yes      -               No     -               3      16    
+  temperatures         sip        Yes      -               No     -               4      14    
+INFO: <info> | 
+
+  RECIPES (FUNCTIONS):
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Return Type     Params  Main   Builtin   Line   Col    Parameter Details                                 
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  start                void            0       Yes    No        6      5      -                                                 
+INFO: <info> | 
+================================================================================
+INFO: <info> | PASS 1 COMPLETE: Symbol tables built successfully
+INFO: <info> | ================================================================================
+INFO: <pass1_symbol_tables> | \u2713 Pass 1 Complete: Symbol tables built
+INFO: <pass2_type_checking> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | PASS 2: Type Checking
+INFO: <pass2_type_checking> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | (Placeholder - Not yet implemented)
+INFO: <pass2_type_checking> | \u2713 Pass 2 Complete (placeholder)
+INFO: <pass3_expression_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | PASS 3: Expression Validation
+INFO: <pass3_expression_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | (Placeholder - Not yet implemented)
+INFO: <pass3_expression_validation> | \u2713 Pass 3 Complete (placeholder)
+INFO: <pass4_control_flow> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | PASS 4: Control Flow Analysis
+INFO: <pass4_control_flow> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | (Placeholder - Not yet implemented)
+INFO: <pass4_control_flow> | \u2713 Pass 4 Complete (placeholder)
+INFO: <pass5_recipe_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | PASS 5: Recipe Call Validation
+INFO: <pass5_recipe_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | (Placeholder - Not yet implemented)
+INFO: <pass5_recipe_validation> | \u2713 Pass 5 Complete (placeholder)
+INFO: <print_summary> | 
+--------------------------------------------------------------------------------
+INFO: <print_summary> | SEMANTIC ANALYSIS SUMMARY
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <print_summary> |   Ingredients: 3 unique names, 3 total declarations
+INFO: <print_summary> |   Recipes: 1 functions
+INFO: <print_summary> |   Errors: 0
+INFO: <print_summary> |   Warnings: 0
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | \u2713 SEMANTIC ANALYSIS COMPLETE: All passes succeeded
+INFO: <analyze> | ================================================================================
+INFO: <program> | Enter: prepare
+INFO: <global_decl> | Enter: prepare
+INFO: <global_decl> | Exit: prepare
+INFO: <recipe_decl> | Enter: prepare
+WARNING: <parse_token> | Expected: prepare | Current: prepare | Remark: MATCH!
+WARNING: <advance> | Consuming: prepare -> piece
+
+INFO: <serve_type> | Enter: piece
+INFO: <decl_head> | Enter: piece
+INFO: <primitive_types_dims> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> (
+
+INFO: <decl_head> | Exit: (
+INFO: <serve_type> | Exit: (
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> piece
+
+INFO: <spice> | Enter: piece
+INFO: <decl_head> | Enter: piece
+INFO: <primitive_types_dims> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ,
+
+INFO: <decl_head> | Exit: ,
+INFO: <spice_tail> | Enter: ,
+WARNING: <parse_token> | Expected: , | Current: , | Remark: MATCH!
+WARNING: <advance> | Consuming: , -> piece
+
+INFO: <decl_head> | Enter: piece
+INFO: <primitive_types_dims> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> )
+
+INFO: <decl_head> | Exit: )
+INFO: <spice_tail> | Enter: )
+INFO: <spice_tail> | Exit: )
+INFO: <spice_tail> | Exit: )
+INFO: <spice> | Exit: )
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> {
+
+INFO: <platter> | Enter: {
+WARNING: <parse_token> | Expected: { | Current: { | Remark: MATCH!
+WARNING: <advance> | Consuming: { -> serve
+
+INFO: <local_decl> | Enter: serve
+INFO: <local_decl> | Exit: serve
+INFO: <statements> | Enter: serve
+INFO: <jump_st> | Enter: serve
+INFO: <jump_serve> | Enter: serve
+WARNING: <parse_token> | Expected: serve | Current: serve | Remark: MATCH!
+WARNING: <advance> | Consuming: serve -> id
+
+INFO: <value> | Enter: id
+INFO: <expr> | Enter: id
+INFO: <or_expr> | Enter: id
+INFO: <and_expr> | Enter: id
+INFO: <eq_expr> | Enter: id
+INFO: <rel_expr> | Enter: id
+INFO: <add_expr> | Enter: id
+INFO: <mult_expr> | Enter: id
+INFO: <unary_expr> | Enter: id
+INFO: <primary_val> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <id_tail> | Enter: ;
+INFO: <call_tailopt> | Enter: ;
+INFO: <call_tailopt> | Exit: ;
+INFO: <accessor_tail> | Enter: ;
+INFO: <accessor_tail> | Exit: ;
+INFO: <id_tail> | Exit: ;
+INFO: <unary_expr> | Exit: ;
+INFO: <mult_tail> | Enter: ;
+INFO: <mult_tail> | Exit: ;
+INFO: <mult_expr> | Exit: ;
+INFO: <add_tail> | Enter: ;
+INFO: <add_tail> | Exit: ;
+INFO: <add_expr> | Exit: ;
+INFO: <rel_tail> | Enter: ;
+INFO: <rel_tail> | Exit: ;
+INFO: <rel_expr> | Exit: ;
+INFO: <eq_tail> | Enter: ;
+INFO: <eq_tail> | Exit: ;
+INFO: <eq_expr> | Exit: ;
+INFO: <and_tail> | Enter: ;
+INFO: <and_tail> | Exit: ;
+INFO: <and_expr> | Exit: ;
+INFO: <or_tail> | Enter: ;
+INFO: <or_tail> | Exit: ;
+INFO: <or_expr> | Exit: ;
+INFO: <expr> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> }
+
+INFO: <jump_serve> | Exit: }
+INFO: <jump_st> | Exit: }
+INFO: <statements> | Enter: }
+INFO: <statements> | Exit: }
+INFO: <statements> | Exit: }
+WARNING: <parse_token> | Expected: } | Current: } | Remark: MATCH!
+WARNING: <advance> | Consuming: } -> prepare
+
+INFO: <platter> | Exit: prepare
+INFO: <recipe_decl> | Enter: prepare
+WARNING: <parse_token> | Expected: prepare | Current: prepare | Remark: MATCH!
+WARNING: <advance> | Consuming: prepare -> sip
+
+INFO: <serve_type> | Enter: sip
+INFO: <decl_head> | Enter: sip
+INFO: <primitive_types_dims> | Enter: sip
+WARNING: <parse_token> | Expected: sip | Current: sip | Remark: MATCH!
+WARNING: <advance> | Consuming: sip -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> (
+
+INFO: <decl_head> | Exit: (
+INFO: <serve_type> | Exit: (
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> piece
+
+INFO: <spice> | Enter: piece
+INFO: <decl_head> | Enter: piece
+INFO: <primitive_types_dims> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ,
+
+INFO: <decl_head> | Exit: ,
+INFO: <spice_tail> | Enter: ,
+WARNING: <parse_token> | Expected: , | Current: , | Remark: MATCH!
+WARNING: <advance> | Consuming: , -> sip
+
+INFO: <decl_head> | Enter: sip
+INFO: <primitive_types_dims> | Enter: sip
+WARNING: <parse_token> | Expected: sip | Current: sip | Remark: MATCH!
+WARNING: <advance> | Consuming: sip -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ,
+
+INFO: <decl_head> | Exit: ,
+INFO: <spice_tail> | Enter: ,
+WARNING: <parse_token> | Expected: , | Current: , | Remark: MATCH!
+WARNING: <advance> | Consuming: , -> flag
+
+INFO: <decl_head> | Enter: flag
+INFO: <primitive_types_dims> | Enter: flag
+WARNING: <parse_token> | Expected: flag | Current: flag | Remark: MATCH!
+WARNING: <advance> | Consuming: flag -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> )
+
+INFO: <decl_head> | Exit: )
+INFO: <spice_tail> | Enter: )
+INFO: <spice_tail> | Exit: )
+INFO: <spice_tail> | Exit: )
+INFO: <spice_tail> | Exit: )
+INFO: <spice> | Exit: )
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> {
+
+INFO: <platter> | Enter: {
+WARNING: <parse_token> | Expected: { | Current: { | Remark: MATCH!
+WARNING: <advance> | Consuming: { -> sip
+
+INFO: <local_decl> | Enter: sip
+INFO: <decl_data_type> | Enter: sip
+WARNING: <parse_token> | Expected: sip | Current: sip | Remark: MATCH!
+WARNING: <advance> | Consuming: sip -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> serve
+
+INFO: <decl_type> | Exit: serve
+INFO: <decl_data_type> | Exit: serve
+INFO: <local_decl> | Enter: serve
+INFO: <local_decl> | Exit: serve
+INFO: <local_decl> | Exit: serve
+INFO: <statements> | Enter: serve
+INFO: <jump_st> | Enter: serve
+INFO: <jump_serve> | Enter: serve
+WARNING: <parse_token> | Expected: serve | Current: serve | Remark: MATCH!
+WARNING: <advance> | Consuming: serve -> id
+
+INFO: <value> | Enter: id
+INFO: <expr> | Enter: id
+INFO: <or_expr> | Enter: id
+INFO: <and_expr> | Enter: id
+INFO: <eq_expr> | Enter: id
+INFO: <rel_expr> | Enter: id
+INFO: <add_expr> | Enter: id
+INFO: <mult_expr> | Enter: id
+INFO: <unary_expr> | Enter: id
+INFO: <primary_val> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <id_tail> | Enter: ;
+INFO: <call_tailopt> | Enter: ;
+INFO: <call_tailopt> | Exit: ;
+INFO: <accessor_tail> | Enter: ;
+INFO: <accessor_tail> | Exit: ;
+INFO: <id_tail> | Exit: ;
+INFO: <unary_expr> | Exit: ;
+INFO: <mult_tail> | Enter: ;
+INFO: <mult_tail> | Exit: ;
+INFO: <mult_expr> | Exit: ;
+INFO: <add_tail> | Enter: ;
+INFO: <add_tail> | Exit: ;
+INFO: <add_expr> | Exit: ;
+INFO: <rel_tail> | Enter: ;
+INFO: <rel_tail> | Exit: ;
+INFO: <rel_expr> | Exit: ;
+INFO: <eq_tail> | Enter: ;
+INFO: <eq_tail> | Exit: ;
+INFO: <eq_expr> | Exit: ;
+INFO: <and_tail> | Enter: ;
+INFO: <and_tail> | Exit: ;
+INFO: <and_expr> | Exit: ;
+INFO: <or_tail> | Enter: ;
+INFO: <or_tail> | Exit: ;
+INFO: <or_expr> | Exit: ;
+INFO: <expr> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> }
+
+INFO: <jump_serve> | Exit: }
+INFO: <jump_st> | Exit: }
+INFO: <statements> | Enter: }
+INFO: <statements> | Exit: }
+INFO: <statements> | Exit: }
+WARNING: <parse_token> | Expected: } | Current: } | Remark: MATCH!
+WARNING: <advance> | Consuming: } -> start
+
+INFO: <platter> | Exit: start
+INFO: <recipe_decl> | Enter: start
+INFO: <recipe_decl> | Exit: start
+INFO: <recipe_decl> | Exit: start
+INFO: <recipe_decl> | Exit: start
+WARNING: <parse_token> | Expected: start | Current: start | Remark: MATCH!
+WARNING: <advance> | Consuming: start -> (
+
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> )
+
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> {
+
+INFO: <platter> | Enter: {
+WARNING: <parse_token> | Expected: { | Current: { | Remark: MATCH!
+WARNING: <advance> | Consuming: { -> bill
+
+INFO: <local_decl> | Enter: bill
+INFO: <local_decl> | Exit: bill
+INFO: <statements> | Enter: bill
+INFO: <built_in_rec_call> | Enter: bill
+INFO: <built_in_rec> | Enter: bill
+WARNING: <parse_token> | Expected: bill | Current: bill | Remark: MATCH!
+WARNING: <advance> | Consuming: bill -> (
+
+INFO: <tail1> | Enter: (
+INFO: <call_tail> | Enter: (
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> chars_lit
+
+INFO: <flavor> | Enter: chars_lit
+INFO: <value> | Enter: chars_lit
+INFO: <expr> | Enter: chars_lit
+INFO: <or_expr> | Enter: chars_lit
+INFO: <and_expr> | Enter: chars_lit
+INFO: <eq_expr> | Enter: chars_lit
+INFO: <rel_expr> | Enter: chars_lit
+INFO: <add_expr> | Enter: chars_lit
+INFO: <mult_expr> | Enter: chars_lit
+INFO: <unary_expr> | Enter: chars_lit
+INFO: <primary_val> | Enter: chars_lit
+WARNING: <parse_token> | Expected: chars_lit | Current: chars_lit | Remark: MATCH!
+WARNING: <advance> | Consuming: chars_lit -> )
+
+INFO: <unary_expr> | Exit: )
+INFO: <mult_tail> | Enter: )
+INFO: <mult_tail> | Exit: )
+INFO: <mult_expr> | Exit: )
+INFO: <add_tail> | Enter: )
+INFO: <add_tail> | Exit: )
+INFO: <add_expr> | Exit: )
+INFO: <rel_tail> | Enter: )
+INFO: <rel_tail> | Exit: )
+INFO: <rel_expr> | Exit: )
+INFO: <eq_tail> | Enter: )
+INFO: <eq_tail> | Exit: )
+INFO: <eq_expr> | Exit: )
+INFO: <and_tail> | Enter: )
+INFO: <and_tail> | Exit: )
+INFO: <and_expr> | Exit: )
+INFO: <or_tail> | Enter: )
+INFO: <or_tail> | Exit: )
+INFO: <or_expr> | Exit: )
+INFO: <expr> | Exit: )
+INFO: <flavor_tail> | Enter: )
+INFO: <flavor_tail> | Exit: )
+INFO: <flavor> | Exit: )
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> ;
+
+INFO: <call_tail> | Exit: ;
+INFO: <accessor_tail> | Enter: ;
+INFO: <accessor_tail> | Exit: ;
+INFO: <tail1> | Exit: ;
+INFO: <built_in_rec_call> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> }
+
+INFO: <statements> | Enter: }
+INFO: <statements> | Exit: }
+INFO: <statements> | Exit: }
+WARNING: <parse_token> | Expected: } | Current: } | Remark: MATCH!
+WARNING: <advance> | Consuming: } -> EOF
+
+INFO: <platter> | Exit: EOF
+INFO: <program> | Exit: EOF
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | SEMANTIC ANALYSIS - MULTI-PASS
+INFO: <analyze> | ================================================================================
+INFO: <pass1_symbol_tables> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass1_symbol_tables> | PASS 1: Symbol Table Construction
+INFO: <pass1_symbol_tables> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <info> | 
+================================================================================
+PASS 1: SYMBOL TABLE CONSTRUCTION
+================================================================================
+DEBUG: <debug> | Visiting program node
+DEBUG: <debug> | Declared recipe: start(0 params) -> void (line 11)
+DEBUG: <debug> | Entered scope: start (level 1)
+DEBUG: <debug> | Exited scope: start (level 1)
+INFO: <info> | 
+  (no ingredients)
+
+INFO: <info> | 
+
+  RECIPES (FUNCTIONS):
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Return Type     Params  Main   Builtin   Line   Col    Parameter Details                                 
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  start                void            0       Yes    No        11     5      -                                                 
+INFO: <info> | 
+================================================================================
+INFO: <info> | PASS 1 COMPLETE: Symbol tables built successfully
+INFO: <info> | ================================================================================
+INFO: <pass1_symbol_tables> | \u2713 Pass 1 Complete: Symbol tables built
+INFO: <pass2_type_checking> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | PASS 2: Type Checking
+INFO: <pass2_type_checking> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | (Placeholder - Not yet implemented)
+INFO: <pass2_type_checking> | \u2713 Pass 2 Complete (placeholder)
+INFO: <pass3_expression_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | PASS 3: Expression Validation
+INFO: <pass3_expression_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | (Placeholder - Not yet implemented)
+INFO: <pass3_expression_validation> | \u2713 Pass 3 Complete (placeholder)
+INFO: <pass4_control_flow> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | PASS 4: Control Flow Analysis
+INFO: <pass4_control_flow> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | (Placeholder - Not yet implemented)
+INFO: <pass4_control_flow> | \u2713 Pass 4 Complete (placeholder)
+INFO: <pass5_recipe_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | PASS 5: Recipe Call Validation
+INFO: <pass5_recipe_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | (Placeholder - Not yet implemented)
+INFO: <pass5_recipe_validation> | \u2713 Pass 5 Complete (placeholder)
+INFO: <print_summary> | 
+--------------------------------------------------------------------------------
+INFO: <print_summary> | SEMANTIC ANALYSIS SUMMARY
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <print_summary> |   Ingredients: 0 unique names, 0 total declarations
+INFO: <print_summary> |   Recipes: 1 functions
+INFO: <print_summary> |   Errors: 0
+INFO: <print_summary> |   Warnings: 0
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | \u2713 SEMANTIC ANALYSIS COMPLETE: All passes succeeded
+INFO: <analyze> | ================================================================================
+INFO: <program> | Enter: piece
+INFO: <global_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> piece
+
+INFO: <decl_type> | Exit: piece
+INFO: <decl_data_type> | Exit: piece
+INFO: <global_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> [
+
+INFO: <decl_type> | Enter: [
+INFO: <dimensions> | Enter: [
+WARNING: <parse_token> | Expected: [ | Current: [ | Remark: MATCH!
+WARNING: <advance> | Consuming: [ -> ]
+
+WARNING: <parse_token> | Expected: ] | Current: ] | Remark: MATCH!
+WARNING: <advance> | Consuming: ] -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <dimensions> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <array_declare> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <array_table_init> | Enter: ;
+INFO: <array_table_init> | Exit: ;
+INFO: <array_declare_tail> | Enter: ;
+INFO: <array_declare_tail> | Exit: ;
+INFO: <array_declare> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> piece
+
+INFO: <decl_type> | Exit: piece
+INFO: <decl_data_type> | Exit: piece
+INFO: <global_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> [
+
+INFO: <decl_type> | Enter: [
+INFO: <dimensions> | Enter: [
+WARNING: <parse_token> | Expected: [ | Current: [ | Remark: MATCH!
+WARNING: <advance> | Consuming: [ -> ]
+
+WARNING: <parse_token> | Expected: ] | Current: ] | Remark: MATCH!
+WARNING: <advance> | Consuming: ] -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <dimensions> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <array_declare> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <array_table_init> | Enter: ;
+INFO: <array_table_init> | Exit: ;
+INFO: <array_declare_tail> | Enter: ;
+INFO: <array_declare_tail> | Exit: ;
+INFO: <array_declare> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> prepare
+
+INFO: <decl_type> | Exit: prepare
+INFO: <decl_data_type> | Exit: prepare
+INFO: <global_decl> | Enter: prepare
+INFO: <global_decl> | Exit: prepare
+INFO: <global_decl> | Exit: prepare
+INFO: <global_decl> | Exit: prepare
+INFO: <global_decl> | Exit: prepare
+INFO: <recipe_decl> | Enter: prepare
+WARNING: <parse_token> | Expected: prepare | Current: prepare | Remark: MATCH!
+WARNING: <advance> | Consuming: prepare -> piece
+
+INFO: <serve_type> | Enter: piece
+INFO: <decl_head> | Enter: piece
+INFO: <primitive_types_dims> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> (
+
+INFO: <decl_head> | Exit: (
+INFO: <serve_type> | Exit: (
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> piece
+
+INFO: <spice> | Enter: piece
+INFO: <decl_head> | Enter: piece
+INFO: <primitive_types_dims> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ,
+
+INFO: <decl_head> | Exit: ,
+INFO: <spice_tail> | Enter: ,
+WARNING: <parse_token> | Expected: , | Current: , | Remark: MATCH!
+WARNING: <advance> | Consuming: , -> piece
+
+INFO: <decl_head> | Enter: piece
+INFO: <primitive_types_dims> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> [
+
+INFO: <dimensions_tail> | Enter: [
+INFO: <dimensions> | Enter: [
+WARNING: <parse_token> | Expected: [ | Current: [ | Remark: MATCH!
+WARNING: <advance> | Consuming: [ -> ]
+
+WARNING: <parse_token> | Expected: ] | Current: ] | Remark: MATCH!
+WARNING: <advance> | Consuming: ] -> of
+
+INFO: <dimensions_tail> | Enter: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <dimensions> | Exit: of
+INFO: <dimensions_tail> | Exit: of
+INFO: <primitive_types_dims> | Exit: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> )
+
+INFO: <decl_head> | Exit: )
+INFO: <spice_tail> | Enter: )
+INFO: <spice_tail> | Exit: )
+INFO: <spice_tail> | Exit: )
+INFO: <spice> | Exit: )
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> {
+
+INFO: <platter> | Enter: {
+WARNING: <parse_token> | Expected: { | Current: { | Remark: MATCH!
+WARNING: <advance> | Consuming: { -> piece
+
+INFO: <local_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ,
+
+INFO: <ingredient_init> | Enter: ,
+INFO: <ingredient_init> | Exit: ,
+INFO: <ingredient_id_tail> | Enter: ,
+WARNING: <parse_token> | Expected: , | Current: , | Remark: MATCH!
+WARNING: <advance> | Consuming: , -> id
+
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> sip
+
+INFO: <decl_type> | Exit: sip
+WARNING: <parse_token> | Expected: sip | Current: sip | Remark: MATCH!
+WARNING: <advance> | Consuming: sip -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> =
+
+INFO: <ingredient_init> | Enter: =
+WARNING: <parse_token> | Expected: = | Current: = | Remark: MATCH!
+WARNING: <advance> | Consuming: = -> sip_lit
+
+INFO: <expr> | Enter: sip_lit
+INFO: <or_expr> | Enter: sip_lit
+INFO: <and_expr> | Enter: sip_lit
+INFO: <eq_expr> | Enter: sip_lit
+INFO: <rel_expr> | Enter: sip_lit
+INFO: <add_expr> | Enter: sip_lit
+INFO: <mult_expr> | Enter: sip_lit
+INFO: <unary_expr> | Enter: sip_lit
+INFO: <primary_val> | Enter: sip_lit
+WARNING: <parse_token> | Expected: sip_lit | Current: sip_lit | Remark: MATCH!
+WARNING: <advance> | Consuming: sip_lit -> ;
+
+INFO: <unary_expr> | Exit: ;
+INFO: <mult_tail> | Enter: ;
+INFO: <mult_tail> | Exit: ;
+INFO: <mult_expr> | Exit: ;
+INFO: <add_tail> | Enter: ;
+INFO: <add_tail> | Exit: ;
+INFO: <add_expr> | Exit: ;
+INFO: <rel_tail> | Enter: ;
+INFO: <rel_tail> | Exit: ;
+INFO: <rel_expr> | Exit: ;
+INFO: <eq_tail> | Enter: ;
+INFO: <eq_tail> | Exit: ;
+INFO: <eq_expr> | Exit: ;
+INFO: <and_tail> | Enter: ;
+INFO: <and_tail> | Exit: ;
+INFO: <and_expr> | Exit: ;
+INFO: <or_tail> | Enter: ;
+INFO: <or_tail> | Exit: ;
+INFO: <or_expr> | Exit: ;
+INFO: <expr> | Exit: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> serve
+
+INFO: <decl_type> | Exit: serve
+INFO: <decl_data_type> | Exit: serve
+INFO: <local_decl> | Enter: serve
+INFO: <local_decl> | Exit: serve
+INFO: <local_decl> | Exit: serve
+INFO: <statements> | Enter: serve
+INFO: <jump_st> | Enter: serve
+INFO: <jump_serve> | Enter: serve
+WARNING: <parse_token> | Expected: serve | Current: serve | Remark: MATCH!
+WARNING: <advance> | Consuming: serve -> id
+
+INFO: <value> | Enter: id
+INFO: <expr> | Enter: id
+INFO: <or_expr> | Enter: id
+INFO: <and_expr> | Enter: id
+INFO: <eq_expr> | Enter: id
+INFO: <rel_expr> | Enter: id
+INFO: <add_expr> | Enter: id
+INFO: <mult_expr> | Enter: id
+INFO: <unary_expr> | Enter: id
+INFO: <primary_val> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <id_tail> | Enter: ;
+INFO: <call_tailopt> | Enter: ;
+INFO: <call_tailopt> | Exit: ;
+INFO: <accessor_tail> | Enter: ;
+INFO: <accessor_tail> | Exit: ;
+INFO: <id_tail> | Exit: ;
+INFO: <unary_expr> | Exit: ;
+INFO: <mult_tail> | Enter: ;
+INFO: <mult_tail> | Exit: ;
+INFO: <mult_expr> | Exit: ;
+INFO: <add_tail> | Enter: ;
+INFO: <add_tail> | Exit: ;
+INFO: <add_expr> | Exit: ;
+INFO: <rel_tail> | Enter: ;
+INFO: <rel_tail> | Exit: ;
+INFO: <rel_expr> | Exit: ;
+INFO: <eq_tail> | Enter: ;
+INFO: <eq_tail> | Exit: ;
+INFO: <eq_expr> | Exit: ;
+INFO: <and_tail> | Enter: ;
+INFO: <and_tail> | Exit: ;
+INFO: <and_expr> | Exit: ;
+INFO: <or_tail> | Enter: ;
+INFO: <or_tail> | Exit: ;
+INFO: <or_expr> | Exit: ;
+INFO: <expr> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> }
+
+INFO: <jump_serve> | Exit: }
+INFO: <jump_st> | Exit: }
+INFO: <statements> | Enter: }
+INFO: <statements> | Exit: }
+INFO: <statements> | Exit: }
+WARNING: <parse_token> | Expected: } | Current: } | Remark: MATCH!
+WARNING: <advance> | Consuming: } -> start
+
+INFO: <platter> | Exit: start
+INFO: <recipe_decl> | Enter: start
+INFO: <recipe_decl> | Exit: start
+INFO: <recipe_decl> | Exit: start
+WARNING: <parse_token> | Expected: start | Current: start | Remark: MATCH!
+WARNING: <advance> | Consuming: start -> (
+
+WARNING: <parse_token> | Expected: ( | Current: ( | Remark: MATCH!
+WARNING: <advance> | Consuming: ( -> )
+
+WARNING: <parse_token> | Expected: ) | Current: ) | Remark: MATCH!
+WARNING: <advance> | Consuming: ) -> {
+
+INFO: <platter> | Enter: {
+WARNING: <parse_token> | Expected: { | Current: { | Remark: MATCH!
+WARNING: <advance> | Consuming: { -> piece
+
+INFO: <local_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> piece
+
+INFO: <decl_type> | Exit: piece
+INFO: <decl_data_type> | Exit: piece
+INFO: <local_decl> | Enter: piece
+INFO: <decl_data_type> | Enter: piece
+WARNING: <parse_token> | Expected: piece | Current: piece | Remark: MATCH!
+WARNING: <advance> | Consuming: piece -> of
+
+INFO: <decl_type> | Enter: of
+WARNING: <parse_token> | Expected: of | Current: of | Remark: MATCH!
+WARNING: <advance> | Consuming: of -> id
+
+INFO: <ingredient_id> | Enter: id
+WARNING: <parse_token> | Expected: id | Current: id | Remark: MATCH!
+WARNING: <advance> | Consuming: id -> ;
+
+INFO: <ingredient_init> | Enter: ;
+INFO: <ingredient_init> | Exit: ;
+INFO: <ingredient_id_tail> | Enter: ;
+INFO: <ingredient_id_tail> | Exit: ;
+INFO: <ingredient_id> | Exit: ;
+WARNING: <parse_token> | Expected: ; | Current: ; | Remark: MATCH!
+WARNING: <advance> | Consuming: ; -> }
+
+INFO: <decl_type> | Exit: }
+INFO: <decl_data_type> | Exit: }
+INFO: <local_decl> | Enter: }
+INFO: <local_decl> | Exit: }
+INFO: <local_decl> | Exit: }
+INFO: <local_decl> | Exit: }
+INFO: <statements> | Enter: }
+INFO: <statements> | Exit: }
+WARNING: <parse_token> | Expected: } | Current: } | Remark: MATCH!
+WARNING: <advance> | Consuming: } -> EOF
+
+INFO: <platter> | Exit: EOF
+INFO: <program> | Exit: EOF
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | SEMANTIC ANALYSIS - MULTI-PASS
+INFO: <analyze> | ================================================================================
+INFO: <pass1_symbol_tables> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass1_symbol_tables> | PASS 1: Symbol Table Construction
+INFO: <pass1_symbol_tables> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <info> | 
+================================================================================
+PASS 1: SYMBOL TABLE CONSTRUCTION
+================================================================================
+DEBUG: <debug> | Visiting program node
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Declared ingredient: globalCount : piece (scope: global, line 2)
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Visiting array_declare for type: piece, dimensions: []
+DEBUG: <debug> | Found array identifier: data
+DEBUG: <debug> | Declaring array: data : piece[] at line 3, col 16
+DEBUG: <debug> | Declared ingredient: data : piece (scope: global, line 3)
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Visiting array_declare for type: piece, dimensions: []
+DEBUG: <debug> | Found array identifier: grid
+DEBUG: <debug> | Declaring array: grid : piece[] at line 4, col 16
+DEBUG: <debug> | Declared ingredient: grid : piece (scope: global, line 4)
+DEBUG: <debug> | Declared recipe: start(0 params) -> void (line 12)
+DEBUG: <debug> | Entered scope: start (level 1)
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Declared ingredient: x : piece (scope: start, line 13)
+DEBUG: <debug> | Processing declaration: piece
+DEBUG: <debug> | Declared ingredient: result : piece (scope: start, line 14)
+DEBUG: <debug> | Exited scope: start (level 1)
+INFO: <info> | 
+
+  GLOBAL INGREDIENTS:
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Type       Array    Dims            Init   InitVal         Line   Col   
+  --------------------------------------------------------------------------------------------------------------------------------------------
+  globalCount          piece      No       -               No     -               2      14    
+  data                 piece      Yes      -               No     -               3      16    
+  grid                 piece      Yes      -               No     -               4      16    
+
+  LOCAL INGREDIENTS:
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Type       Scope           Level   Array    Dims            Param   Line   Col   
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  x                    piece      start           1       No       -               No      13     18    
+  result               piece      start           1       No       -               No      14     18    
+INFO: <info> | 
+
+  RECIPES (FUNCTIONS):
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Name                 Return Type     Params  Main   Builtin   Line   Col    Parameter Details                                 
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  start                void            0       Yes    No        12     5      -                                                 
+INFO: <info> | 
+================================================================================
+INFO: <info> | PASS 1 COMPLETE: Symbol tables built successfully
+INFO: <info> | ================================================================================
+INFO: <pass1_symbol_tables> | \u2713 Pass 1 Complete: Symbol tables built
+INFO: <pass2_type_checking> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | PASS 2: Type Checking
+INFO: <pass2_type_checking> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass2_type_checking> | (Placeholder - Not yet implemented)
+INFO: <pass2_type_checking> | \u2713 Pass 2 Complete (placeholder)
+INFO: <pass3_expression_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | PASS 3: Expression Validation
+INFO: <pass3_expression_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass3_expression_validation> | (Placeholder - Not yet implemented)
+INFO: <pass3_expression_validation> | \u2713 Pass 3 Complete (placeholder)
+INFO: <pass4_control_flow> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | PASS 4: Control Flow Analysis
+INFO: <pass4_control_flow> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass4_control_flow> | (Placeholder - Not yet implemented)
+INFO: <pass4_control_flow> | \u2713 Pass 4 Complete (placeholder)
+INFO: <pass5_recipe_validation> | 
+\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | PASS 5: Recipe Call Validation
+INFO: <pass5_recipe_validation> | \u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6\u25b6
+INFO: <pass5_recipe_validation> | (Placeholder - Not yet implemented)
+INFO: <pass5_recipe_validation> | \u2713 Pass 5 Complete (placeholder)
+INFO: <print_summary> | 
+--------------------------------------------------------------------------------
+INFO: <print_summary> | SEMANTIC ANALYSIS SUMMARY
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <print_summary> |   Ingredients: 5 unique names, 5 total declarations
+INFO: <print_summary> |   Recipes: 1 functions
+INFO: <print_summary> |   Errors: 0
+INFO: <print_summary> |   Warnings: 0
+INFO: <print_summary> | --------------------------------------------------------------------------------
+INFO: <analyze> | 
+================================================================================
+INFO: <analyze> | \u2713 SEMANTIC ANALYSIS COMPLETE: All passes succeeded
+INFO: <analyze> | ================================================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Repositories\platter-compiler-webapp\backend\tests\test_semantic_analyzer.py", line 145, in <module>
+    print(f"  {status:<12} {name}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Programming\Python\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+
+################################################################################
+# SEMANTIC ANALYZER TEST SUITE
+################################################################################
+
+================================================================================
+TEST: Basic Variables
+================================================================================
+
+Source Code:
+--------------------------------------------------------------------------------
+
+    piece of x, y, z;
+    sip of temperature = 98.6;
+    flag of isReady;
+    
+    start() {
+        piece of count;
+        bill(x);
+    }
+    
+--------------------------------------------------------------------------------
+
+[1/3] Lexical Analysis...
+  Generated 98 tokens
+
+[2/3] Parsing (Building AST)...
+  AST built successfully
+
+[3/3] Semantic Analysis...
+
+================================================================================
+TEST: Array Declarations
+================================================================================
+
+Source Code:
+--------------------------------------------------------------------------------
+
+    piece[] of numbers;
+    piece[] of matrix;
+    sip[] of temperatures;
+    
+    start() {
+        bill("test");
+    }
+    
+--------------------------------------------------------------------------------
+
+[1/3] Lexical Analysis...
+  Generated 79 tokens
+
+[2/3] Parsing (Building AST)...
+  AST built successfully
+
+[3/3] Semantic Analysis...
+
+================================================================================
+TEST: Recipe Parameters
+================================================================================
+
+Source Code:
+--------------------------------------------------------------------------------
+
+    prepare piece of add(piece of x, piece of y) {
+        serve x;
+    }
+    
+    prepare sip of calculate(piece of a, sip of b, flag of c) {
+        sip of result;
+        serve result;
+    }
+    
+    start() {
+        bill("test");
+    }
+    
+--------------------------------------------------------------------------------
+
+[1/3] Lexical Analysis...
+  Generated 161 tokens
+
+[2/3] Parsing (Building AST)...
+  AST built successfully
+
+[3/3] Semantic Analysis...
+
+================================================================================
+TEST: Complex Program
+================================================================================
+
+Source Code:
+--------------------------------------------------------------------------------
+
+    piece of globalCount;
+    piece[] of data;
+    piece[] of grid;
+    
+    prepare piece of process(piece of input, piece[] of arr) {
+        piece of local1, local2;
+        sip of temp = 3.14;
+        serve local1;
+    }
+    
+    start() {
+        piece of x;
+        piece of result;
+    }
+    
+--------------------------------------------------------------------------------
+
+[1/3] Lexical Analysis...
+  Generated 184 tokens
+
+[2/3] Parsing (Building AST)...
+  AST built successfully
+
+[3/3] Semantic Analysis...
+
+================================================================================
+TEST SUMMARY
+================================================================================
