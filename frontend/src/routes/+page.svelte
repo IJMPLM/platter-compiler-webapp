@@ -193,7 +193,11 @@ start() {
 
 	async function analyzeSemantic() {
 		activeTab = 'semantic';
-		setTerminalError('Semantics not yet implemented');
+		
+		if (!codeInput) {
+			setTerminalError('Editor is empty');
+			return;
+		}
 
 		try {
 			const res = await fetch('http://localhost:8000/analyzeSemantic', {
@@ -206,22 +210,83 @@ start() {
 
 			if (data.success) {
 				clearErrorMarkers();
-				setTerminalOk(data.message || 'Semantic analysis completed successfully');
+				
+				// Format success message with symbol table counts
+				const ingredientCount = data.ingredients?.length || 0;
+				const recipeCount = data.recipes?.length || 0;
+				const globalVars = data.ingredients?.filter((i: any) => i.is_global).length || 0;
+				const localVars = ingredientCount - globalVars;
+				
+				const messages: TermMsg[] = [
+					{ icon: check, text: data.message || 'Semantic analysis completed successfully' },
+					{ icon: check, text: `Symbol Tables: ${ingredientCount} ingredients (${globalVars} global, ${localVars} local), ${recipeCount} recipes` }
+				];
+				
+				// Add ingredient details
+				if (data.ingredients && data.ingredients.length > 0) {
+					messages.push({ icon: check, text: 'Variables:' });
+					data.ingredients.forEach((ing: any) => {
+						const scope = ing.is_global ? 'global' : ing.scope;
+						const init = ing.initialized ? ' [initialized]' : '';
+						const param = ing.is_parameter ? ' [parameter]' : '';
+						messages.push({ 
+							icon: check, 
+							text: `  ${ing.name}: ${ing.type} (${scope}, line ${ing.line})${init}${param}` 
+						});
+					});
+				}
+				
+				// Add recipe details
+				if (data.recipes && data.recipes.length > 0) {
+					messages.push({ icon: check, text: 'Functions:' });
+					data.recipes.forEach((recipe: any) => {
+						const main = recipe.is_main ? ' [MAIN]' : '';
+						const returnType = recipe.return_type ? ` -> ${recipe.return_type}` : '';
+						messages.push({ 
+							icon: check, 
+							text: `  ${recipe.name}(${recipe.parameter_count} params)${returnType}${main} (line ${recipe.line})` 
+						});
+					});
+				}
+				
+				// Add warnings if any
+				if (data.warnings && data.warnings.length > 0) {
+					data.warnings.forEach((w: string) => {
+						messages.push({ icon: warning, text: `WARNING: ${w}` });
+					});
+				}
+				
+				termMessages = messages;
 			} else {
+				// Handle errors
+				const errorMessages: TermMsg[] = [
+					{ icon: errorIcon, text: data.message || 'Semantic analysis failed' }
+				];
+				
+				// Add specific errors
+				if (data.errors && data.errors.length > 0) {
+					data.errors.forEach((err: string) => {
+						errorMessages.push({ icon: errorIcon, text: err });
+					});
+				}
+				
 				// Handle syntax errors with line/col information
 				if (data.error && data.error.line && data.error.col) {
-				// Create a token-like object for the error marker
-				const errorToken = {
-				type: 'Syntax Error',
-				value: 'error',
-				line: data.error.line,
-				col: data.error.col
-				};
-				addErrorMarkers([errorToken]);
+					const errorToken = {
+						type: 'Semantic Error',
+						value: 'error',
+						line: data.error.line,
+						col: data.error.col
+					};
+					addErrorMarkers([errorToken]);
 				}
-				setTerminalError(data.message || 'Semantic analysis failed');
+				
+				termMessages = errorMessages;
 			}
-		} catch (err) {}
+		} catch (err) {
+			const msg = err instanceof Error ? err.message : 'Unknown error';
+			setTerminalError(`Semantic analysis failed: ${msg}`);
+		}
 	}
 
 	async function analyzeSyntax() {
