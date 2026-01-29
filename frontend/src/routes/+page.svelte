@@ -247,6 +247,20 @@ start() {
 					codeInput = cmInstance.getValue();
 				});
 			}
+
+			// Add keyboard shortcut for Ctrl+Enter to run semantic analysis
+			const handleKeyDown = (e: KeyboardEvent) => {
+				if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+					e.preventDefault();
+					analyzeSemantic();
+				}
+			};
+			document.addEventListener('keydown', handleKeyDown);
+
+			// Cleanup listener on unmount
+			return () => {
+				document.removeEventListener('keydown', handleKeyDown);
+			};
 		} catch (err) {
 			console.warn('Failed to load CodeMirror from CDN:', err);
 		}
