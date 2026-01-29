@@ -191,6 +191,13 @@ start() {
 		});
 	}
 
+	function normalizeQuotes(text: string): string {
+		// Convert curly quotes to straight quotes using Unicode escape sequences
+		// \u201C = left double quotation mark (")
+		// \u201D = right double quotation mark (")
+		return text.replace(/[\u201C\u201D]/g, '"');
+	}
+
 	async function analyzeSemantic() {
 		activeTab = 'semantic';
 		if (!codeInput) {
@@ -200,6 +207,10 @@ start() {
 		isAnalyzing = true;
 		clearErrorMarkers();
 		clearTerminal();
+		codeInput = normalizeQuotes(codeInput);
+		if (cmInstance && typeof cmInstance.setValue === 'function') {
+			cmInstance.setValue(codeInput);
+		}
 
 		try {
 			const res = await fetch('http://localhost:8000/analyzeSemantic', {
@@ -244,6 +255,10 @@ start() {
 	}
 
 	async function analyzeSyntax() {
+		codeInput = normalizeQuotes(codeInput);
+		if (cmInstance && typeof cmInstance.setValue === 'function') {
+			cmInstance.setValue(codeInput);
+		}
 		await analyzeLexical();
 
 		if (termMessages.length === 1 && termMessages[0].text.startsWith('Lexical OK')) {
@@ -298,6 +313,10 @@ start() {
 			return;
 		}
 		isAnalyzing = true;
+		codeInput = normalizeQuotes(codeInput);
+		if (cmInstance && typeof cmInstance.setValue === 'function') {
+			cmInstance.setValue(codeInput);
+		}
 		try {
 			const res = await fetch('http://localhost:8000/analyzeLexical', {
 				method: 'POST',
