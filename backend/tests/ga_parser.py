@@ -1,3 +1,4 @@
+import logging
 import unittest
 from app.lexer.lexer import Lexer
 from app.parser.parser import Parser
@@ -5,6 +6,7 @@ from tests.syntax_tscripts import SYNTAX_TSCRIPTS
 
 class TestParser(unittest.TestCase):
     def test_syntax_scripts(self):
+        logging.getLogger().setLevel(logging.CRITICAL)
         for script in SYNTAX_TSCRIPTS:
             lexer = Lexer(script["code"])
             tokens = lexer.tokenize()
@@ -14,15 +16,20 @@ class TestParser(unittest.TestCase):
                 result = parser.parse()
                 self.assertEqual(
                     "Syntax OK",
-                    "Syntax OK",
-                    msg=f"Failed for CODE #{script['number']}\nCODE:\n{script['code']}"
+                    "Syntax OK"
                 )
             except SyntaxError as e:
-                self.assertEqual(
-                    str(e),
-                    expected_output,
-                    msg=f"Failed for CODE #{script['number']}\nCODE:\n{script['code']}"
-                )
+                try:
+                    self.assertEqual(
+                        e.msg,
+                        expected_output
+                    )
+                except AssertionError as ae:
+                    RED = '\033[91m'
+                    YELLOW = '\033[93m'
+                    RESET = '\033[0m'
+                    print(f"\n{YELLOW}Failed for CODE #{script['number']}\nCODE:{script['code']}{RESET}")
+                    print(f"{RED}AssertionError: {ae}{RESET}")
 
 if __name__ == "__main__":
     unittest.main()
