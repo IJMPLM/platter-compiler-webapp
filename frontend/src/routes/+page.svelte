@@ -111,6 +111,116 @@ start() {
 		}
 	}
 
+	function definePlatterMode() {
+		const CM = (window as any).CodeMirror;
+		if (!CM) return;
+
+		// Define keyword sets
+		const keywords = {
+			conditional: ['alt', 'check', 'instead'],
+			logical: ['and', 'or', 'not'],
+			loop: ['order', 'repeat'],
+			control: ['pass', 'menu', 'choice', 'stop', 'next', 'usual'],
+			method: ['append', 'bill', 'copy', 'cut', 'fact', 'matches', 'size', 'sort', 'sqrt', 'tochars', 'topiece', 'take', 'tosip', 'rand', 'pow', 'remove', 'reverse', 'search'],
+			type: ['chars', 'flag', 'piece', 'sip'],
+			boolean: ['down', 'up'],
+			function: ['prepare', 'start'],
+			return: ['serve', 'of'],
+			struct: ['table']
+		};
+
+		// Create a set for quick lookup
+		const keywordMap = new Map<string, string>();
+		Object.entries(keywords).forEach(([category, words]) => {
+			words.forEach(word => keywordMap.set(word, category));
+		});
+
+		CM.defineMode('platter', function() {
+			return {
+				startState: function() {
+					return { inString: false, stringChar: '' };
+				},
+				token: function(stream: any, state: any) {
+					// Skip whitespace
+					if (stream.eatSpace()) return null;
+
+					// Handle strings
+					if (state.inString) {
+						while (!stream.eol()) {
+							if (stream.next() === state.stringChar) {
+								state.inString = false;
+								break;
+							}
+							// Check for escape sequences within strings
+							if (stream.current() === '\\') {
+								const nextChar = stream.peek();
+								if (nextChar === 'n' || nextChar === 't') {
+									return 'escape-sequence';
+								}
+							}
+						}
+						return 'string';
+					}
+
+					// Start a string
+					if (stream.eat('"')) {
+						state.inString = true;
+						state.stringChar = '"';
+						return 'string';
+					}
+
+					// Handle escape sequences
+					if (stream.eat('\\')) {
+						if (stream.eat('n') || stream.eat('t')) {
+							return 'escape-sequence';
+						}
+						return 'escape-sequence';
+					}
+
+					// Handle numbers
+					if (stream.match(/^\d+(\.\d+)?/)) {
+						return 'number';
+					}
+
+					// Handle identifiers and keywords
+					if (stream.match(/^[a-zA-Z_][a-zA-Z0-9_]*/)) {
+						const word = stream.current();
+						const category = keywordMap.get(word);
+						if (category) {
+							return `keyword-${category}`;
+						}
+						return 'variable';
+					}
+
+					// Handle compound operators (must be before single-char operators)
+					if (stream.match(/^(==|!=|<=|>=|\+=|-=|\*=|\/=|%=)/)) {
+						return 'operator-compound';
+					}
+
+					// Handle single-char operators
+					if (stream.match(/^[=\+\-\*\/%<>]/)) {
+						return 'operator-arithmetic';
+					}
+
+					// Handle delimiters
+					if (stream.match(/^[{}\[\](),:;]/)) {
+						return 'delimiter';
+					}
+
+					// Handle comments
+					if (stream.eat('#')) {
+						stream.skipToEnd();
+						return 'comment';
+					}
+
+					// Skip any other character
+					stream.next();
+					return null;
+				}
+			};
+		});
+	}
+
 	onMount(async () => {
 		try {
 			// load CodeMirror assets from CDN (lightweight integration)
@@ -121,11 +231,16 @@ start() {
 			);
 			if (textareaEl && (window as any).CodeMirror) {
 				const CM = (window as any).CodeMirror;
+				
+				// Define the Platter mode
+				definePlatterMode();
+				
 				cmInstance = CM.fromTextArea(textareaEl, {
 					lineNumbers: true,
 					// enable soft-wrapping so long lines flow to the next visual line
 					lineWrapping: true,
-					viewportMargin: Infinity
+					viewportMargin: Infinity,
+					mode: 'platter'
 				});
 				cmInstance.setSize('100%', '100%');
 				cmInstance.on('change', () => {
@@ -478,7 +593,7 @@ start() {
 
 <div class="ide" data-theme={theme} style={`--bg-img: url(${theme === 'dark' ? darkBg : lightBg})`}>
 	<!-- Top bar -->
-	<header class="titlebar">
+	<header class="titlebar">  
 		<div class="brand">
 			<img class="logo" src={logo} alt="Platter logo" />
 			<span class="name">Platter IDE</span>
@@ -1076,5 +1191,100 @@ start() {
 	:global(.error-underline) {
 		border-bottom: 2px solid #ff0000 !important;
 		background-color: rgba(255, 0, 0, 0.1) !important;
+	}
+
+	/* Platter language syntax highlighting */
+	:global(.cm-keyword-conditional) {
+		color: #ff6b6b !important; /* Red for conditionals */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-logical) {
+		color: #ffa94d !important; /* Orange for logical operators */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-loop) {
+		color: #4ecdc4 !important; /* Teal for loops */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-control) {
+		color: #a78bfa !important; /* Purple for control flow */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-method) {
+		color: #51cf66 !important; /* Green for methods */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-type) {
+		color: #74c0fc !important; /* Light blue for data types */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-boolean) {
+		color: #ffd43b !important; /* Yellow for boolean */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-function) {
+		color: #ff922b !important; /* Deep orange for function definition */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-return) {
+		color: #f06595 !important; /* Pink for return */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-keyword-struct) {
+		color: #748ffc !important; /* Indigo for struct */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-string) {
+		color: #95e1d3 !important;
+	}
+
+	:global(.cm-number) {
+		color: #ffd43b !important;
+	}
+
+	:global(.cm-comment) {
+		color: #888888 !important;
+		font-style: italic !important;
+	}
+
+	:global(.cm-operator) {
+		color: #bbb !important;
+	}
+
+	:global(.cm-variable) {
+		color: inherit !important;
+	}
+
+	/* Operators */
+	:global(.cm-operator-arithmetic) {
+		color: #ff9999 !important; /* Light red for arithmetic operators */
+		font-weight: bold !important;
+	}
+
+	:global(.cm-operator-compound) {
+		color: #ff6666 !important; /* Darker red for compound operators */
+		font-weight: bold !important;
+	}
+
+	/* Delimiters */
+	:global(.cm-delimiter) {
+		color: #ffb366 !important; /* Orange for delimiters */
+		font-weight: bold !important;
+	}
+
+	/* Escape sequences */
+	:global(.cm-escape-sequence) {
+		color: #99ccff !important; /* Light blue for escape sequences */
+		font-weight: bold !important;
 	}
 </style>
