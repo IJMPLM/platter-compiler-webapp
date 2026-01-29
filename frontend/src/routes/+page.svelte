@@ -1193,98 +1193,95 @@ start() {
 		background-color: rgba(255, 0, 0, 0.1) !important;
 	}
 
-	/* Platter language syntax highlighting */
+	/* Platter language syntax highlighting (TypeScript standard colors) */
 	:global(.cm-keyword-conditional) {
-		color: #ff6b6b !important; /* Red for conditionals */
+		color: #569cd6 !important; /* Blue for conditionals */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-logical) {
-		color: #ffa94d !important; /* Orange for logical operators */
+		color: #569cd6 !important; /* Blue for logical operators */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-loop) {
-		color: #4ecdc4 !important; /* Teal for loops */
+		color: #569cd6 !important; /* Blue for loops */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-control) {
-		color: #a78bfa !important; /* Purple for control flow */
+		color: #569cd6 !important; /* Blue for control flow */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-method) {
-		color: #51cf66 !important; /* Green for methods */
+		color: #dcdcaa !important; /* Yellow for methods */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-type) {
-		color: #74c0fc !important; /* Light blue for data types */
+		color: #4ec9b0 !important; /* Cyan/Teal for data types */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-boolean) {
-		color: #ffd43b !important; /* Yellow for boolean */
+		color: #569cd6 !important; /* Blue for boolean */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-function) {
-		color: #ff922b !important; /* Deep orange for function definition */
+		color: #569cd6 !important; /* Blue for function definition */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-return) {
-		color: #f06595 !important; /* Pink for return */
+		color: #569cd6 !important; /* Blue for return */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-keyword-struct) {
-		color: #748ffc !important; /* Indigo for struct */
+		color: #569cd6 !important; /* Blue for struct */
 		font-weight: bold !important;
 	}
 
 	:global(.cm-string) {
-		color: #95e1d3 !important;
+		color: #ce9178 !important; /* Orange/Tan for strings */
 	}
 
 	:global(.cm-number) {
-		color: #ffd43b !important;
+		color: #b5cea8 !important; /* Light green for numbers */
 	}
 
 	:global(.cm-comment) {
-		color: #888888 !important;
+		color: #6a9955 !important; /* Muted green for comments */
 		font-style: italic !important;
 	}
 
 	:global(.cm-operator) {
-		color: #bbb !important;
+		color: #d4d4d4 !important; /* Light gray for operators */
 	}
 
 	:global(.cm-variable) {
-		color: inherit !important;
+		color: #9cdcfe !important; /* Light blue for variables */
 	}
 
 	/* Operators */
 	:global(.cm-operator-arithmetic) {
-		color: #ff9999 !important; /* Light red for arithmetic operators */
-		font-weight: bold !important;
+		color: #d4d4d4 !important; /* Light gray for arithmetic operators */
 	}
 
 	:global(.cm-operator-compound) {
-		color: #ff6666 !important; /* Darker red for compound operators */
-		font-weight: bold !important;
+		color: #d4d4d4 !important; /* Light gray for compound operators */
 	}
 
 	/* Delimiters */
 	:global(.cm-delimiter) {
-		color: #ffb366 !important; /* Orange for delimiters */
-		font-weight: bold !important;
+		color: #d4d4d4 !important; /* Light gray for delimiters */
 	}
 
 	/* Escape sequences */
 	:global(.cm-escape-sequence) {
-		color: #99ccff !important; /* Light blue for escape sequences */
+		color: #ce9178 !important; /* Orange/Tan for escape sequences */
 		font-weight: bold !important;
 	}
 </style>
