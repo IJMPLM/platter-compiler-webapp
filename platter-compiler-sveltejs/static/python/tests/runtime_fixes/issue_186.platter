@@ -1,0 +1,9 @@
+start(){
+    piece of num = 526;
+    repeat(num > 0){
+        num = num % 10;
+    }
+}
+--end
+--end
+[[RUNTIME_ERROR]]Execution halted: possible infinite loop (instruction limit exceeded)

@@ -90,8 +90,11 @@ class TACInterpreter:
         "take":    None,
     }
 
+    DEFAULT_MAX_STEPS = 1_000_000
+
     def __init__(self, instructions: List[TACInstruction],
-                 stdin_lines: Optional[List[str]] = None):
+                 stdin_lines: Optional[List[str]] = None,
+                 max_steps: Optional[int] = DEFAULT_MAX_STEPS):
         """
         Args:
             instructions: Optimized TAC instruction list from IRGenerator.
@@ -102,6 +105,9 @@ class TACInterpreter:
         self.output_lines: List[str] = []          # captured stdout
         self.stdin_lines = list(stdin_lines or [])  # pre-fed input
         self._stdin_idx = 0
+        self.max_steps = max_steps
+        self.steps_executed = 0
+        self.interrupt_requested = False
 
         # Pre-process: build label→pc and function→pc maps
         self.label_map: Dict[str, int] = {}        # label_name → instruction index
@@ -163,6 +169,15 @@ class TACInterpreter:
                 "globals": {k: v for k, v in self.global_frame.vars.items()
                             if not k.startswith("t")},
             }
+        except KeyboardInterrupt:
+            return {
+                "success": False,
+                "paused": False,
+                "error": "Execution interrupted by user",
+                "output": "".join(self.output_lines),
+                "terminate_message": "Program terminated by user",
+                "stdin_consumed": self._stdin_idx,
+            }
         except (ValueError, TypeError) as e:
             return {
                 "success": False,
@@ -196,6 +211,14 @@ class TACInterpreter:
 
     def _execute(self):
         while self.pc < len(self.instructions):
+            if self.interrupt_requested:
+                raise InterpreterError("Execution interrupted by user")
+            if self.max_steps is not None:
+                self.steps_executed += 1
+                if self.steps_executed > self.max_steps:
+                    raise InterpreterError(
+                        "Execution halted: possible infinite loop (instruction limit exceeded)"
+                    )
             instr = self.instructions[self.pc]
 
             # When scanning the top-level (we are in the global frame), skip over
@@ -211,6 +234,9 @@ class TACInterpreter:
 
             self.pc += 1
             self._dispatch(instr)
+
+    def request_interrupt(self):
+        self.interrupt_requested = True
 
     def _dispatch(self, instr: TACInstruction):
         t = type(instr)
