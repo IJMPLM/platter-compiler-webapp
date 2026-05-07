@@ -165,6 +165,8 @@ class TACInterpreter:
         and executed inline.  Recipe calls go through _call_function as normal.
         Returns a summary dict with output, final global vars, and status.
         """
+        # run() is the public entry point: it owns the interpreter lifecycle and
+        # returns a normalized result object for the frontend/backend to consume.
         if self.halted:
             return {
                 "success": True,
@@ -242,15 +244,17 @@ class TACInterpreter:
     # ── Main execution loop ────────────────────────────────────────────────────
 
     def _execute(self, max_steps: Optional[int] = None) -> bool:
+        # This is the main interpreter loop: pc iterates the TAC list one instruction
+        # at a time until the program ends, pauses for input, or hits max_steps.
         steps = 0
         while self.pc < len(self.instructions):
             if max_steps is not None and steps >= max_steps:
                 return True
             instr = self.instructions[self.pc]
 
-            # When scanning the top-level (we are in the global frame), skip over
-            # recipe bodies — they will be executed only when called via _call_function.
-            # The 'start' body is NOT skipped; it executes inline.
+            # When scanning the top-level (global frame), skip over
+            # recipe bodies (will be executed via _call_function)
+            # The 'start' executes inline.
             if (isinstance(instr, TACFunctionBegin)
                     and self.current_frame is self.global_frame
                     and instr.func_name != "start"):
@@ -266,6 +270,8 @@ class TACInterpreter:
         return False
 
     def _dispatch(self, instr: TACInstruction):
+        # Dispatch decodes the instructions, where each TAC subclass maps to one
+        # runtime action such as load/store, jump, call, return, or no-op.
         t = type(instr)
 
         if t is TACComment or t is TACNop or t is TACFunctionBegin or t is TACFunctionEnd:
@@ -403,6 +409,8 @@ class TACInterpreter:
         return text
 
     def _call_builtin(self, name: str, args: List[Any]) -> Any:
+        # Built-ins are handled natively here instead of going through TAC call
+        # frames, because they have fixed semantics and return values directly.
         fn = self.BUILTINS[name]
 
         # ── Type conversions ─────────────────────────────────────────────
