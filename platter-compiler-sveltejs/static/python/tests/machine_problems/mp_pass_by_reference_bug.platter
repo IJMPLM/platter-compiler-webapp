@@ -1,0 +1,86 @@
+table of Student = [
+    chars of name;
+    chars of studentNumber;
+    sip[] of grade;
+];
+
+Student[] of records = [];
+Student of newRecord = [];
+sip[] of inputGrade = [0.0, 0.0, 0.0, 0.0, 0.0];
+piece of i = 0;
+piece of j = 0;
+
+start(){
+    # Create first student record with grades [1, 2, 3, 4, 5]
+    inputGrade[0] = 1.0;
+    inputGrade[1] = 2.0;
+    inputGrade[2] = 3.0;
+    inputGrade[3] = 4.0;
+    inputGrade[4] = 5.0;
+    
+    newRecord = [
+        name = "abc";
+        studentNumber = "123";
+        grade = inputGrade;
+    ];
+    records = append(records, newRecord);
+    
+    # Create second student record with grades [9, 8, 7, 6, 5]
+    # This modifies inputGrade which ALSO affects the first record if pass-by-ref bug exists
+    inputGrade[0] = 9.0;
+    inputGrade[1] = 8.0;
+    inputGrade[2] = 7.0;
+    inputGrade[3] = 6.0;
+    inputGrade[4] = 5.0;
+    
+    newRecord = [
+        name = "def";
+        studentNumber = "456";
+        grade = inputGrade;
+    ];
+    records = append(records, newRecord);
+    
+    # Display all records
+    bill("All Student Records\n");
+    bill("==============================\n");
+    
+    pass(i = 0; i += 1; i < size(records)){
+        bill("Record #" + tochars(i + 1) + "\n");
+        bill("Name: " + records[i]:name + "\n");
+        bill("Student Number: " + records[i]:studentNumber + "\n");
+        
+        pass(j = 0; j += 1; j < size(records[i]:grade)){
+            bill("Grade - " + tochars(j + 1) + " : " + tochars(records[i]:grade[j]) + "\n");
+        }
+        
+        # GWA calculated fixed GWA bug
+        bill("GWA: " + tochars((records[i]:grade[0] + records[i]:grade[1] + records[i]:grade[2] + records[i]:grade[3] + records[i]:grade[4]) / 5.0) + "\n");
+        bill("------------------------------\n");
+    }
+
+    serve 0;
+}
+--end
+--end
+All Student Records
+==============================
+Record #1
+Name: abc
+Student Number: 123
+Grade - 1 : 1.0
+Grade - 2 : 2.0
+Grade - 3 : 3.0
+Grade - 4 : 4.0
+Grade - 5 : 5.0
+GWA: 3.0
+------------------------------
+Record #2
+Name: def
+Student Number: 456
+Grade - 1 : 9.0
+Grade - 2 : 8.0
+Grade - 3 : 7.0
+Grade - 4 : 6.0
+Grade - 5 : 5.0
+GWA: 7.0
+------------------------------

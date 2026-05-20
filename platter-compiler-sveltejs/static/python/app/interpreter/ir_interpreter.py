@@ -6,6 +6,7 @@ No assembly or machine code generation needed — runs the IR as a tree-walking
 interpreter over the flat TAC instruction list.
 """
 import math
+import copy
 
 from typing import List, Dict, Any, Optional
 from app.intermediate_code.tac import (
@@ -274,7 +275,11 @@ class TACInterpreter:
             val   = self._load(instr.value)
             if not isinstance(arr, list):
                 raise InterpreterError(f"'{instr.array}' is not an array")
-            arr[index] = val
+            # Store by value when assigning collections into array slots
+            if isinstance(val, (list, dict)):
+                arr[index] = copy.deepcopy(val)
+            else:
+                arr[index] = val
 
         elif t is TACTableAccess:
             tbl = self._load(instr.table)
@@ -287,7 +292,11 @@ class TACInterpreter:
             val = self._load(instr.value)
             if not isinstance(tbl, dict):
                 raise InterpreterError(f"'{instr.table}' is not a table")
-            tbl[instr.field] = val
+            # Store by value when assigning collections into table fields
+            if isinstance(val, (list, dict)):
+                tbl[instr.field] = copy.deepcopy(val)
+            else:
+                tbl[instr.field] = val
 
         elif t is TACParam:
             self.param_stack.append(self._load(instr.arg))
@@ -619,6 +628,11 @@ class TACInterpreter:
         # Phase 2: validate numeric limits before storing to a named ingredient.
         # Skip internal temp variables (they begin with 't') to allow large
         # intermediate values to exist during expression evaluation.
+        # Ensure collections are stored by value (deep copy) to preserve
+        # Platter's pass-by-value semantics for arrays/tables.
+        if isinstance(value, (list, dict)):
+            value = copy.deepcopy(value)
+
         if not name.startswith("t"):
             if isinstance(value, int) and not isinstance(value, bool):
                 self._validate_piece_storage(value, name)
